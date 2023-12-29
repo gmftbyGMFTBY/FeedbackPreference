@@ -1,5 +1,6 @@
 cff-version: 0.0.1
 message: "If you use this software, please cite it as below."
+type: data
 authors:
 - family-names: "Tian"
   given-names: "Lan"
