@@ -1,4 +1,4 @@
-# FeedbackPreference
+# A Preference-based Feedback Corpus
 
 Tian Lan, Ziao Ma, RongCheng Tu, Chen Xu, Heyan Huang, Xian-ling Mao
 
