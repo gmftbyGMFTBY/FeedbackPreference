@@ -1,0 +1,10 @@
+cff-version: 0.0.1
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Tian"
+  given-names: "Lan"
+  orcid: "https://orcid.org/my-orcid?orcid=0000-0002-5200-1537"
+title: "Feedback Preference"
+version: 0.0.1
+date-released: 2023.12.29
+url: "https://github.com/gmftbyGMFTBY/FeedbackPreference"
