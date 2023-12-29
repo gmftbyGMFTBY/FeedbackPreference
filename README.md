@@ -60,6 +60,7 @@ Note that it is just the initial phase of our work. In the future, we plan to bu
 
 #### Road Map
 
+- [ ] Collecting more preference-based feedback samples from existing critique-tuned corpus
 - [ ] Annotate High-quality Test Set
 - [ ] Training Llama2-7B Model with SFT and DPO
 
