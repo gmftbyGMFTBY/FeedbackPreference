@@ -67,7 +67,7 @@ Note that it is just the initial phase of our work. In the future, we plan to bu
 #### Dataset Link
 
 Our preference feedback dataset could be found in huggingface dataset: [FeedbackPreference](https://huggingface.co/datasets/GMFTBY/FeedbackPreference)
-
+You can also find it in `data/processed_feedback_preference.json`.
 
 ## Citation 
 
