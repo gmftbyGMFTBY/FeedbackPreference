@@ -16,7 +16,7 @@ if __name__ == "__main__":
 3. After writing an analysis (meta-feedback), write a preference label indicates which feedback is better. You should refer to the score rubric.
 4. The output format should look as follows: \"Meta-Feedback: (write an analysis for two feedbacks) [LABEL] (a label A or B of two feedbacks)\"
 5. Please do not generate any other opening, closing, and explanations.'''
-    with open('test.md', 'w', encoding='GB18030') as f:
+    with open('test.md', 'w', encoding='utf-8') as f:
         f.write('| ' + ' | '.join(['ID', '任务设定', '用户指令', 'Chat模型生成回复', '参考回复（5分）', '打分标准', '待评估反思A', '待评估反思B', 'GPT-4针对两个反思的分析', 'GPT-4的偏好标签']) + ' |\n')
         f.write('|--|--|--|--|--|--|--|--|--|--|\n')
         for index, sample in enumerate(data):
@@ -35,12 +35,13 @@ if __name__ == "__main__":
             )
             f.write('| ' + ' | '.join([
                 str(index),
-                task_description.replace('\n', '    '),
-                sample['orig_instruction'].replace('\n', '    '),
-                sample['orig_response'].replace('\n', '    '),
-                sample['orig_reference_answer'].replace('\n', '    '),
-                rubrics.replace('\n', '    '),
-                sample['meta_feedback_generation']['feedback_a'].replace('\n', '    '),
-                sample['meta_feedback_generation']['feedback_b'].replace('\n', '    '),
-                sample['meta_feedback_generation']['orig_output'].replace('\n', '    '),
+                '<div style="width: 300pt">' + task_description.replace('\n', '<br>') + '</div>',
+                '<div style="width: 300pt">' + sample['orig_instruction'].replace('\n', '<br>') + '</div>',
+                '<div style="width: 300pt">' + sample['orig_response'].replace('\n', '<br>') + '</div>',
+                '<div style="width: 400pt">' + sample['orig_reference_answer'].replace('\n', '<br>') + '</div>',
+                '<div style="width: 300pt">' + rubrics.replace('\n', '<br>') + '</div>',
+                '<div style="width: 300pt">' + sample['meta_feedback_generation']['feedback_a'].replace('\n', '<br>') + '</div>',
+                '<div style="width: 300pt">' + sample['meta_feedback_generation']['feedback_b'].replace('\n', '<br>') + '</div>',
+                '<div style="width: 300pt">' + sample['meta_feedback_generation']['orig_output'].replace('\n', '<br>') + '</div>',
+                '<div style="width: 50pt"> <ul><li>[ ] A</li><li>[ ] B</li></ul> </div>'
             ]) + ' |\n')
