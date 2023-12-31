@@ -18,7 +18,7 @@ if __name__ == "__main__":
 5. Please do not generate any other opening, closing, and explanations.'''
     with open('test.md', 'w', encoding='GB18030') as f:
         f.write('| ' + ' | '.join(['ID', '任务设定', '用户指令', 'Chat模型生成回复', '参考回复（5分）', '打分标准', '待评估反思A', '待评估反思B', 'GPT-4针对两个反思的分析', 'GPT-4的偏好标签']) + ' |\n')
-        f.write('|--|--|--|--|--|--|--|--|--|--|')
+        f.write('|--|--|--|--|--|--|--|--|--|--|\n')
         for index, sample in enumerate(data):
             rubrics = '''[{orig_criteria}]
             Score 1: {orig_score1_description}
