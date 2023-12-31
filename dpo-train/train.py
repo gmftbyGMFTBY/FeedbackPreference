@@ -80,7 +80,7 @@ def load_dpo_dataset(data_dir: str, max_sample: int = None) -> Dataset:
       \n\nHuman: <prompt>\n\nAssistant:
     Multiple turns are allowed, but the prompt should always start with \n\nHuman: and end with \n\nAssistant:.
     """
-    with open(os.path.join(data_dir, f"processed_feedback_preference.json"), 'r+') as f:
+    with open(os.path.join(data_dir, f"train.json"), 'r+') as f:
         data = json.load(f)
     list_data = [{
         "prompt": item["prompt"],
